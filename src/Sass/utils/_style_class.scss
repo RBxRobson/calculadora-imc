@@ -1,0 +1,66 @@
+//* Classes de estilo adicionadas/removidas por JS *\\
+.fade-out {
+    animation: fadeOut .5s ease-in-out forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn .5s .5s ease-in-out forwards;
+}
+
+.fade-in--fast {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeIn .5s ease-in-out forwards;
+}
+
+.p-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.d-none {
+    display: none;
+}
+
+.error {
+    opacity: 0;
+    visibility: hidden;
+}
+
+//* Classes de cores para a tabela IMC *\\
+.bg-blue-strong {
+    background-color: var(--gpc-blue-strong);
+}
+
+.bg-blue-medium {
+    background-color: var(--gpc-blue-medium);
+}
+
+.bg-blue-soft {
+    background-color: var(--gpc-blue-soft);
+}
+
+.bg-green {
+    background-color: var(--gpc-green);
+}
+
+.bg-yellow {
+    background-color: var(--gpc-yellow);
+}
+
+.bg-orange {
+    background-color: var(--gpc-orange);
+}
+
+.bg-red-medium {
+    background-color: var(--gpc-red-medium);
+}
+
+.bg-red-strong {
+    background-color: var(--gpc-red-strong);
+}

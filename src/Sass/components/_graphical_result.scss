@@ -1,0 +1,100 @@
+@import '../utils/breakpoints';
+
+.graphical-result {
+    position: relative;
+    height: 19rem;
+    width: 19rem;
+    margin: 2rem auto;
+
+    @include breakpoints (small) {
+        width: 18rem;
+        height: 18rem;
+    }
+}
+
+.circle-result {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+        rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    z-index: -1;
+
+    @for $result from 0 through 50 {
+        $deg: 90deg+(7.2 * ($result));
+
+        &--#{$result} {
+            $color-target: none;
+
+            @if ($result < 16) {
+                $color-target: var(--gpc-blue-strong);
+            }
+
+            @else if ($result ==16) {
+                $color-target: var(--gpc-blue-medium);
+            }
+
+            @else if ($result ==17) {
+                $color-target: var(--gpc-blue-soft);
+            }
+
+            @else if ($result <=24) {
+                $color-target: var(--gpc-green);
+            }
+
+            @else if ($result <=29) {
+                $color-target: var(--gpc-yellow);
+            }
+
+            @else if ($result <=34) {
+                $color-target: var(--gpc-orange);
+            }
+
+            @else if ($result <=39) {
+                $color-target: var(--gpc-red-medium);
+            }
+
+            @else {
+                $color-target: var(--gpc-red-strong);
+            }
+
+            $direction: if($result < 26, right, left);
+            $color: if($result < 26, var(--gray-soft), #{$color-target});
+
+            background: linear-gradient(to #{$direction},
+                #{$color} 50%,
+                transparent 50%,
+            ),
+            linear-gradient(#{$deg},
+                #{$color-target} 50%,
+                var(--gray-soft) 50%);
+        }
+    }
+
+    &::before {
+        content: "";
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white-strong);
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+            rgba(17, 17, 26, 0.05) 0px 8px 32px;
+        border-radius: 50%;
+        transform: scale(0.85);
+        font-size: 500%;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+}
+
+.number-result {
+    font-size: 300%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}

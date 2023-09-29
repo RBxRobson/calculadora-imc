@@ -1,0 +1,13 @@
+@keyframes fadeIn {
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        visibility: hidden;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,39 @@
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    &_control {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        &_input {
+            margin: 0 auto;
+            font-size: 20px;
+            padding: .5rem;
+            border: 2px solid var(--gray-soft);
+            border-radius: 6px;
+            width: 19rem;
+            outline: none;
+
+            &::placeholder {
+                color: var(--gray-medium);
+            }
+
+            &:hover {
+                border: 2px solid var(--gray-strong);
+
+                &::placeholder {
+                    color: var(--gray-strong);
+                }
+            }
+
+            &:focus {
+                border: 2px solid var(--color-button);
+            }
+        }
+    }
+}

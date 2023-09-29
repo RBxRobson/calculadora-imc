@@ -1,0 +1,16 @@
+@import '../utils/breakpoints';
+
+.animation {
+    display: flex;
+    justify-content: center;
+    max-height: 38rem;
+    transform: translateY(-3rem);
+
+    @include breakpoints (medium) {
+        max-height: 27rem;
+    }
+
+    @include breakpoints (small) {
+        max-height: 25rem;
+    }
+}

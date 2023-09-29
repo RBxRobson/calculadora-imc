@@ -1,0 +1,21 @@
+// Base \\
+@import './base/base';
+@import './base/typography';
+
+// Components \\
+@import './components/animation';
+@import './components/form';
+@import './components/button';
+@import './components/graphical_result';
+@import './components/status_user';
+
+// Layout \\
+@import './layout/result_IMC';
+@import './layout/interactive_call';
+@import './layout/interactive_form';
+
+// Utils \\
+@import './utils/variables';
+@import './utils/keyframes';
+@import './utils/style_class';
+@import './utils/breakpoints';
